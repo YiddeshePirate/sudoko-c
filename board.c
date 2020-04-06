@@ -50,7 +50,7 @@ void display_board(board* b)
             }
         }
     }
-    printf("|");
+    printf("|\n");
 }
 
 int find_empty_val(board* b, int* d)
@@ -65,8 +65,6 @@ int find_empty_val(board* b, int* d)
             {
                 d[0] = i;
                 d[1] = j;
-                printf("%d\n", d[0]);
-                printf("%d\n", d[1]);
                 return 1;
             }
         }

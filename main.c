@@ -4,8 +4,11 @@
 #include "square.h"
 #include "board.h"
 
+int count;
+
 bool Solve(board* b)
 {
+    count++;
     int* l = malloc(2*sizeof(int));
 
     if (!find_empty_val(b, l))
@@ -19,7 +22,6 @@ bool Solve(board* b)
         s.x = l[0];
         s.y = l[1];
         s.val = i;
-        display_board(b);
         if(is_valid_square(&s, b))
         {
 
@@ -46,4 +48,5 @@ int main()
     prompt_board(&tb1);
     Solve(&tb1);
     display_board(&tb1);
+    printf("\n iterations: %d\n", count);
 }
