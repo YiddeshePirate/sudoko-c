@@ -4,3 +4,4 @@ test.c
 .idea\
 .idea/
 soduko.sh
+.vscode
